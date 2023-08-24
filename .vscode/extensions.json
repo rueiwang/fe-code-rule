@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "hex-ci.stylelint-plus",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode-remote.remote-ssh",
+        "ms-vscode-remote.remote-ssh-edit",
+        "dsznajder.es7-react-js-snippets"
+    ]
+}
