@@ -20,6 +20,7 @@ module.exports = {
     jsx: true,
   },
   rules: {
+    'func-style': ['error', 'declaration'],
     'import/order': [
       'error',
       {
