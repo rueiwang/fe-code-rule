@@ -48,13 +48,15 @@ module.exports = {
         groups: [
           'useState',
           'useRef',
+          'useSelector',
           'useDispatch',
-          'useCallback',
           'useReducer',
           'useContext',
-          'useEffect'
-        ]
-      }
-    ]
-  }
-}
+          'useCallback',
+          'useMemo',
+          'useEffect',
+        ],
+      },
+    ],
+  },
+};
