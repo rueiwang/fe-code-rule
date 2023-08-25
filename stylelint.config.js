@@ -28,19 +28,12 @@ module.exports = {
     'scss/at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: [
-          'tailwind',
-          'apply',
-          'variants',
-          'responsive',
-          'screen',
-          'layer'
-        ]
+        ignoreAtRules: []
       }
     ],
     // 不檢查權重
     'no-descending-specificity': null,
-    // 禁止重複規則
+    // 禁止重複 import 規則
     'no-duplicate-at-import-rules': true,
     // 禁止重複選擇器
     'no-duplicate-selectors': true,
@@ -106,13 +99,13 @@ module.exports = {
     'declaration-block-semicolon-space-before': 'never',
     // block 中最後一個屬性必须有分號
     'declaration-block-trailing-semicolon': 'always',
-    // block 的關閉括號前不能有空行
+    // block 的 } 前不能有空行
     'block-closing-brace-empty-line-before': 'never',
-    // block 的關閉括號前需要换行
+    // block 的 } 前需要换行
     'block-closing-brace-newline-before': 'always',
-    // block 的開括號後需要换行
+    // block 的 { 後需要换行
     'block-opening-brace-newline-after': 'always',
-    // block 的開括號前需要有空格
+    // block 的 { 前需要有空格
     'block-opening-brace-space-before': 'always',
     // 属性選擇器括號内不能有空格
     'selector-attribute-brackets-space-inside': 'never',
