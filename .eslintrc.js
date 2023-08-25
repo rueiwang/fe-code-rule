@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: ['airbnb', 'airbnb/hooks', 'prettier'],
   plugins: ['hooks'],
@@ -11,11 +11,14 @@ module.exports = {
       files: ['**/*.{ts,tsx}'],
       parserOptions: {
         project: ['./tsconfig.json'],
-        tsconfigRootDir: __dirname
+        tsconfigRootDir: __dirname,
       },
-      extends: ['airbnb', 'airbnb/hooks', 'airbnb-typescript', 'prettier']
-    }
+      extends: ['airbnb', 'airbnb/hooks', 'airbnb-typescript', 'prettier'],
+    },
   ],
+  ecmaFeatures: {
+    jsx: true,
+  },
   rules: {
     'import/order': [
       'error',
@@ -23,24 +26,32 @@ module.exports = {
         groups: [
           ['builtin', 'external'], // node builtin module → external package
           ['internal'], // → internal module
-          ['index', 'sibling', 'parent', 'object', 'type'] // → sort by relative path: index → ./ → ../ → object-import → type import
+          ['index', 'sibling', 'parent', 'object', 'type'], // → sort by relative path: index → ./ → ../ → object-import → type import
         ],
         pathGroups: [
           {
-            pattern: 'react*',
+            pattern: 'react*/**',
             group: 'external',
-            position: 'before'
-          }
+            position: 'before',
+            patternOptions: { partial: true, nocomment: true },
+          },
+          {
+            // "import './style.css'" need to be imported at the end of the imports list
+            pattern: '*.+(css|less|scss|sass|pcss|styl)',
+            group: 'type',
+            patternOptions: { matchBase: true },
+            position: 'after',
+          },
         ],
         'newlines-between': 'always',
-        pathGroupsExcludedImportTypes: ['react'], // react 開頭都排第一個
+        pathGroupsExcludedImportTypes: ['react*/**'], // react 開頭都排第一個
         alphabetize: {
           order:
             'asc' /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */,
-          caseInsensitive: true /* ignore case. Options: [true, false] */
+          caseInsensitive: true /* ignore case. Options: [true, false] */,
         },
-        warnOnUnassignedImports: true
-      }
+        warnOnUnassignedImports: true,
+      },
     ],
     'hooks/sort': [
       2,
