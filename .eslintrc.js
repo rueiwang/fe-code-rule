@@ -5,6 +5,7 @@ module.exports = {
     es2021: true
   },
   extends: ['airbnb', 'airbnb/hooks', 'prettier'],
+  plugins: ['hooks'],
   overrides: [
     {
       files: ['**/*.{ts,tsx}'],
@@ -39,6 +40,20 @@ module.exports = {
           caseInsensitive: true /* ignore case. Options: [true, false] */
         },
         warnOnUnassignedImports: true
+      }
+    ],
+    'hooks/sort': [
+      2,
+      {
+        groups: [
+          'useState',
+          'useRef',
+          'useDispatch',
+          'useCallback',
+          'useReducer',
+          'useContext',
+          'useEffect'
+        ]
       }
     ]
   }
