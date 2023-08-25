@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ext .js --ignore-path .gitignore ."
+    "lint": "npm run lint:script && npm run lint:style",
+    "lint:script": "npx eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
+    "lint:style": "stylelint --cache src/**/*.{scss} --fix"
   },
   "author": "",
   "license": "ISC",
