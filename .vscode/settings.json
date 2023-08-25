@@ -1,86 +1,20 @@
 {
-  // Eliza and Michael
-  // 關閉編輯器預覽功能
-  // "workbench.editor.enablePreview": false,
-  // // 設定圖示主題為 "vscode-icons"
-  // "workbench.iconTheme": "vscode-icons",
-  // // 自動拉取 Git 更新
-  // "git.autofetch": true,
-  // // 確認 Git 同步
-  // "git.confirmSync": false,
-  // // 設定編輯器制表符大小為 2 個空格
-  // "editor.tabSize": 2,
-  // // 建議選擇建議項目時，選擇第一個建議
-  // "editor.suggestSelection": "first",
-  // // 編輯器游標閃爍效果為 "smooth"
-  // "editor.cursorBlinking": "smooth",
-  // // 粘貼時自動格式化代碼
-  // "editor.formatOnPaste": true,
-  // // 儲存時自動格式化代碼
-  // "editor.formatOnSave": true,
-  // // 單引號格式化
-  // "prettier.singleQuote": true,
-  // // 使用 tab 字元作為縮排
-  // "prettier.useTabs": true,
-  // // Vue 文件中的 script 和 style 部分縮排
-  // "prettier.vueIndentScriptAndStyle": true,
-  // // 禁止確認刪除操作
-  // "explorer.confirmDelete": false,
-  // // 不顯示 VSCode Icons 的新版本訊息
-  // "vsicons.dontShowNewVersionMessage": true,
-  // // TypeScript 模組導入時使用非相對路徑
-  // "typescript.preferences.importModuleSpecifier": "non-relative",
-  // // JavaScript 模組導入時使用非相對路徑
-  // "javascript.preferences.importModuleSpecifier": "non-relative",
-  // // 設定差異編輯器的最大計算時間為 0
-  // "diffEditor.maxComputationTime": 0,
-  // // 忽略擴展建議
-  // "extensions.ignoreRecommendations": true,
-  // // GitLens 日期格式設定
-  // "gitlens.codeLens.dateFormat": "",
-
-  // // Eliza
-  // // 設定工作台主題為 "Default Dark+"
-  // "workbench.colorTheme": "Default Dark+",
-  // // 啟動時不打開任何編輯器
-  // "workbench.startupEditor": "none",
-  // // 顯示編輯器標籤
-  // "workbench.editor.showTabs": true,
-  // // 設定特定檔案類型的編輯器關聯
-  // "workbench.editorAssociations": {
-  //   "*.csv": "default"
-  // },
-  // // 編輯器游標平滑動畫效果
-  // "editor.cursorSmoothCaretAnimation": "on",
-  // // 視窗縮放等級
-  // // "window.zoomLevel": 1,
-  // // Live Server 設定不顯示訊息
-  // "liveServer.settings.donotShowInfoMsg": true,
-  // // GitLens 目前行日期格式設定
-  // "gitlens.currentLine.dateFormat": "",
-
-  // Michael
-  // 忽略 Git Rebase 警告
-  // "git.ignoreRebaseWarning": true,
-  // // 合併編輯器關閉
-  // "git.mergeEditor": false,
-  // // 不自動打開上層資料夾的 Git 庫
-  // "git.openRepositoryInParentFolders": "never",
-  // // 關閉編輯器游標平滑動畫效果
-  // "editor.cursorSmoothCaretAnimation": "off",
-  // // 不使用編輯器配置文件中的 Prettier 設定
-  // "prettier.useEditorConfig": false,
-  // // 關閉 GitLens CodeLens 功能
-  // "gitlens.codeLens.enabled": false,
-  // // 忽略拖放操作確認
-  // "explorer.confirmDragAndDrop": false,
-  // // 關閉編輯器迷你地圖
-  // "editor.minimap.enabled": false,
-  // // 關閉 Power Mode
-  // "powermode.enabled": false,
-
-  // -----------------------------------------------------
-  // VScode
+  // 設定編輯器制表符大小為 2 個空格
+  "editor.tabSize": 2,
+  // 粘貼時自動格式化代碼
+  "editor.formatOnPaste": true,
+  // 儲存時自動格式化代碼
+  "editor.formatOnSave": true,
+  // 單引號格式化
+  "prettier.singleQuote": true,
+  // 使用 tab 字元作為縮排
+  "prettier.useTabs": true,
+  // Vue 文件中的 script 和 style 部分縮排
+  "prettier.vueIndentScriptAndStyle": true,
+  // TypeScript 模組導入時使用非相對路徑
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  // JavaScript 模組導入時使用非相對路徑
+  "javascript.preferences.importModuleSpecifier": "non-relative",
   // 關閉 JavaScript 格式化
   "javascript.format.enable": false,
   // 關閉 SCSS 驗證
@@ -94,11 +28,8 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  // 儲存時自動格式化，僅針對已修改的部分
   "editor.formatOnSaveMode": "file",
-  // 移動檔案時自動更新導入路徑
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  // // 預設使用 Prettier 作為格式化工具
+  // 預設使用 Prettier 作為格式化工具
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -109,7 +40,7 @@
   "eslint.format.enable": true,
   // 檢查 JavaScript 和 TypeScript 代碼
   "eslint.validate": ["javascript", "typescript"],
-  "eslint.workingDirectories": [{ "mode": "auto" }],
+  // "eslint.workingDirectories": [{ "mode": "auto" }],
   "eslint.run": "onSave",
 
   // Extension: hex-ci.stylelint-plus
