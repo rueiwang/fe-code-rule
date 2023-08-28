@@ -8,7 +8,7 @@ module.exports = {
   plugins: ['hooks'],
   overrides: [
     {
-      files: ['**/*.{ts,tsx}'],
+      files: ['**/*.{ts,tsx}', '*.{ts,tsx}'],
       parserOptions: {
         project: ['./tsconfig.json'],
         tsconfigRootDir: __dirname,
@@ -16,9 +16,6 @@ module.exports = {
       extends: ['airbnb', 'airbnb/hooks', 'airbnb-typescript', 'prettier'],
     },
   ],
-  ecmaFeatures: {
-    jsx: true,
-  },
   rules: {
     'func-style': ['error', 'declaration'],
     'import/order': [
